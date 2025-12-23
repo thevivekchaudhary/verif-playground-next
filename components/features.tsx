@@ -3,9 +3,57 @@ import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import FeaturesImage from "@/public/images/features.png";
 
+const features = [
+  {
+    id: 1,
+    title: "Define, Convert, and Integrate – All in One Place",
+    description:
+      "Easily define your SoC register architecture, convert Verilog and C headers into a unified format, and auto-generate UVM-compatible outputs.",
+    iconPath: "M4 4h16v2H4V4Zm0 7h16v2H4v-2Zm0 7h16v2H4v-2Z",
+  },
+  {
+    id: 2,
+    title: "VerifPlay Playground: Smarter Test Planning",
+    description:
+      "Define your verification intent once, and let VerifPlay auto-generate optimized, coverage-driven testcases with traceability.",
+    iconPath: "M3 5h18v2H3V5Zm0 6h12v2H3v-2Zm0 6h6v2H3v-2Z",
+    iconCircle: { cx: 19, cy: 17, r: 2 },
+  },
+  {
+    id: 3,
+    title: "Smart Design Document by VerifPlay",
+    description:
+      "Transform specs into interactive waveforms, flowcharts, block diagrams, and circuit diagrams — all in one intelligent workspace.",
+    iconPath: "M4 3h16v2H4V3Zm0 4h16v2H4V7Zm0 4h10v2H4v-2Zm0 4h6v2H4v-2Z",
+  },
+  {
+    id: 4,
+    title: "Smart Design Document with AI Assist",
+    description:
+      "Effortlessly add waveforms, flowcharts, block diagrams, and circuit diagrams with AI-driven precision — right inside your design document.",
+    iconPath: "M12 2 2 7l10 5 10-5-10-5Zm0 7.5L4 7v10l8 2.5V9.5Zm2 0v10L20 17V7l-6 2.5Z",
+  },
+  {
+    id: 5,
+    title: "Python-Based AI API by VerifPlay",
+    description:
+      "Integrate VerifPlay’s AI API into any workflow to generate automated testcases, empower multi-level debugging, and cut verification milestones by up to 40%.",
+    iconPath:
+      "M12 2a10 10 0 1 0 10 10A10.012 10.012 0 0 0 12 2Zm1 14.93V20h-2v-3.07A8.005 8.005 0 0 1 4.07 13H1v-2h3.07A8.005 8.005 0 0 1 11 4.07V1h2v3.07A8.005 8.005 0 0 1 19.93 11H23v2h-3.07A8.005 8.005 0 0 1 13 16.93Z",
+  },
+  {
+    id: 6,
+    title: "ASIC Verification Regression Data Management",
+    description:
+      "Track millions of test results with intelligent data management built for ASIC verification — all in one powerful platform.",
+    iconPath: "M3 5h18v2H3V5Zm0 6h12v2H3v-2Zm0 6h6v2H3v-2Zm14-6h4v8h-4v-8Z",
+  },
+];
+
 export default function Features() {
   return (
     <section className="relative">
+      {/* Background shapes */}
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
@@ -30,25 +78,23 @@ export default function Features() {
           alt="Blurred shape"
         />
       </div>
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+        <div className="py-12 md:py-20">
           {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
-            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
-              <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Advanced Controls
+          <div className="mx-auto max-w-3xl pb-6 text-center md:pb-12">
+            <div className="pb-3 text-center">
+              <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent text-lg md:text-xl">
+                Explore our features
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Built for modern product teams
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-6 font-nacelle text-4xl md:text-5xl font-semibold text-transparent">
+              Everything you need to work smarter, together
             </h2>
-            <p className="text-lg text-indigo-200/65">
-              Open AI reads and understands your files, and with nothing more
-              than a single line of feedback, so you can go further than the
-              speed of thought.
-            </p>
           </div>
-          <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
+
+          {/* Features image */}
+          <div className="flex justify-center pb-6 md:pb-12">
             <Image
               className="max-w-none"
               src={FeaturesImage}
@@ -57,136 +103,33 @@ export default function Features() {
               alt="Features"
             />
           </div>
-          {/* Items */}
-          <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z" />
-                <path
-                  fillOpacity=".48"
-                  d="m16.295 5.393 7.528 2.034-4.436 16.412L5.87 20.185l.522-1.93 11.585 3.132 3.392-12.55-5.597-1.514.522-1.93Z"
-                />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Project Milestones
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path fillOpacity=".48" d="M7 8V0H5v8h2Zm12 16v-4h-2v4h2Z" />
-                <path d="M19 6H0v2h17v8H7v-6H5v8h19v-2h-5V6Z" />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Team Views
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path d="M23.414 6 18 .586 16.586 2l3 3H7a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4h12.586l-3 3L18 11.414 23.414 6Z" />
-                <path
-                  fillOpacity=".48"
-                  d="M13.01 12.508a2.5 2.5 0 0 0-3.502.482L1.797 23.16.203 21.952l7.71-10.17a4.5 4.5 0 1 1 7.172 5.437l-4.84 6.386-1.594-1.209 4.841-6.385a2.5 2.5 0 0 0-.482-3.503Z"
-                />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Advanced Search
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path
-                  fillOpacity=".48"
-                  d="m3.031 9.05-.593-.805 1.609-1.187.594.804a6.966 6.966 0 0 1 0 8.276l-.594.805-1.61-1.188.594-.805a4.966 4.966 0 0 0 0-5.9Z"
-                />
-                <path d="m7.456 6.676-.535-.845 1.69-1.07.534.844a11.944 11.944 0 0 1 0 12.789l-.535.845-1.69-1.071.536-.845a9.944 9.944 0 0 0 0-10.647Z" />
-                <path
-                  d="m11.888 4.35-.514-.858 1.717-1.027.513.858a16.9 16.9 0 0 1 2.4 8.677 16.9 16.9 0 0 1-2.4 8.676l-.513.859-1.717-1.028.514-.858A14.9 14.9 0 0 0 14.003 12a14.9 14.9 0 0 0-2.115-7.65Z"
-                  opacity=".48"
-                />
-                <path d="m16.321 2-.5-.866 1.733-1 .5.866A22 22 0 0 1 21 12c0 3.852-1.017 7.636-2.948 10.97l-.502.865-1.73-1.003.501-.865A19.878 19.878 0 0 0 19 12a20 20 0 0 0-2.679-10Z" />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Strategic Initiatives
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path
-                  fillOpacity=".48"
-                  d="M12 8.8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
-                />
-                <path d="m7.454 2.891.891-.454L7.437.655l-.891.454a12 12 0 0 0 0 21.382l.89.454.91-1.781-.892-.455a10 10 0 0 1 0-17.818ZM17.456 1.11l-.891-.454-.909 1.782.891.454a10 10 0 0 1 0 17.819l-.89.454.908 1.781.89-.454a12 12 0 0 0 0-21.382Z" />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Flexible Workflows
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path
-                  fillOpacity=".48"
-                  d="M19 8h5v2h-5V8Zm-4 5h9v2h-9v-2Zm9 5H11v2h13v-2Z"
-                />
-                <path d="M19.406 3.844 6.083 20.497.586 15 2 13.586l3.917 3.917L17.844 2.595l1.562 1.25Z" />
-              </svg>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Unified Timeline
-              </h3>
-              <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
-              </p>
-            </article>
+
+          {/* Features list */}
+          <div className="grid mx-auto max-w-sm gap-20 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-24 lg:grid-cols-3">
+            {features.map((feature) => (
+              <article key={feature.id} className="flex flex-col mb-12">
+                <svg
+                  className="mb-6 h-8 w-8 fill-indigo-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d={feature.iconPath} />
+                  {feature.iconCircle && (
+                    <circle
+                      cx={feature.iconCircle.cx}
+                      cy={feature.iconCircle.cy}
+                      r={feature.iconCircle.r}
+                    />
+                  )}
+                </svg>
+                <h3 className="mt-4 mb-5 font-nacelle text-xl md:text-2xl font-semibold text-gray-200">
+                  {feature.title}
+                </h3>
+                <p className="text-indigo-200/65 text-base md:text-lg mt-2">
+                  {feature.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </div>

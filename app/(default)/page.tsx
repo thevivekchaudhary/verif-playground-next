@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Verif Playground - AndGate Informatics",
+  description: "VerifPlay is an innovative platform developed by AndGate Informatics, dedicated to accelerating functional verification across the ASIC and SoC design lifecycle.",
 };
 
 import PageIllustration from "@/components/page-illustration";
@@ -15,9 +15,8 @@ export default function Home() {
     <>
       <PageIllustration />
       <Hero />
-      <Workflows />
       <Features />
-      <Testimonials />
+      <Workflows />
       <Cta />
     </>
   );
