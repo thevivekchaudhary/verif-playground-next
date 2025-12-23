@@ -7,10 +7,9 @@ import { FaUser } from "react-icons/fa";
 export default function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Features", href: "/features" },
-    { name: "Contact", href: "/contact" },
-    { name: "About", href: "/about" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Features", href: "/#features" },
+    { name: "Contact Us", href: "/#contact" },
+    { name: "About Us", href: "/#about" },
   ];
 
   return (
